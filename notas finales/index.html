@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> notas finales</title>
+
+<script>
+
+    // Pedir nombre y carrera
+let nombre = prompt("Ingrese el nombre del estudiante:");
+let carrera = prompt("Ingrese la carrera del estudiante:");
+
+// ----- HTML -----
+let htmlNota1 = parseFloat(prompt("Ingrese nota 1 [HTML]:"));
+let htmlNota2 = parseFloat(prompt("Ingrese nota 2 [HTML]:"));
+let htmlNota3 = parseFloat(prompt("Ingrese nota 3 [HTML]:"));
+let htmlPromedio = ((htmlNota1 + htmlNota2 + htmlNota3) / 3).toFixed(2);
+
+// ----- CSS -----
+let cssNota1 = parseFloat(prompt("Ingrese nota 1 [CSS]:"));
+let cssNota2 = parseFloat(prompt("Ingrese nota 2 [CSS]:"));
+let cssNota3 = parseFloat(prompt("Ingrese nota 3 [CSS]:"));
+let cssPromedio = ((cssNota1 + cssNota2 + cssNota3) / 3).toFixed(2);
+
+// ----- JavaScript -----
+let jsNota1 = parseFloat(prompt("Ingrese nota 1 [JavaScript]:"));
+let jsNota2 = parseFloat(prompt("Ingrese nota 2 [JavaScript]:"));
+let jsNota3 = parseFloat(prompt("Ingrese nota 3 [JavaScript]:"));
+let jsPromedio = ((jsNota1 + jsNota2 + jsNota3) / 3).toFixed(2);
+
+// Mostrar resultados en consola
+console.log("Nombre: " + nombre);
+console.log("Carrera: " + carrera);
+console.log("HTML -> Nota1: " + htmlNota1 + ", Nota2: " + htmlNota2 + ", Nota3: " + htmlNota3 + ", Promedio: " + htmlPromedio);
+console.log("CSS -> Nota1: " + cssNota1 + ", Nota2: " + cssNota2 + ", Nota3: " + cssNota3 + ", Promedio: " + cssPromedio);
+console.log("JavaScript -> Nota1: " + jsNota1 + ", Nota2: " + jsNota2 + ", Nota3: " + jsNota3 + ", Promedio: " + jsPromedio);
+
+        
+
+</script>
+</head>
+        
+<body>
+    
+</body>
+
+

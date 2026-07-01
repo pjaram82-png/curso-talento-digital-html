@@ -1,0 +1,22 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Estilo inicial para los títulos de ingredientes y preparación */
+.titulo-seccion {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+/* Estilo para simular que los títulos de las tarjetas son interactivos */
+.card-title {
+    cursor: pointer;
+    user-select: none;
+}
+
+.card-title:hover {
+    text-decoration: underline;
+}

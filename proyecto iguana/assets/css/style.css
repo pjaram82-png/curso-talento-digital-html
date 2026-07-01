@@ -1,0 +1,223 @@
+/* ============================================
+   Variables y reset
+   ============================================ */
+:root {
+  --color-negro: #000000;
+  --color-blanco: #ffffff;
+  --color-oscuro: #1e1a13;
+  --color-footer: #3a352c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 300;
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Color requerido para h1, h2 y p en toda la página */
+h1,
+h2,
+p {
+  color: var(--color-blanco);
+}
+
+/* ============================================
+   TOP BAR / TÍTULO
+   ============================================ */
+.top-bar {
+  background-color: var(--color-negro);
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.top-bar h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  width: 100%;
+  background-color: var(--color-negro);
+}
+
+.hero__img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: 65% 35%;
+}
+
+/* ============================================
+   DESCRIPCIÓN
+   ============================================ */
+.desc-section {
+  background-color: var(--color-negro);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px 40px;
+}
+
+.desc-section__texto {
+  flex: 1 1 320px;
+}
+
+.desc-section__texto p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+  margin-bottom: 14px;
+}
+
+.desc-section__img {
+  flex: 0 0 200px;
+  width: 200px;
+}
+
+.desc-section__img img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* ============================================
+   CARACTERÍSTICAS / ÍCONOS
+   ============================================ */
+.icons-section {
+  background-color: var(--color-oscuro);
+  text-align: center;
+  padding: 40px 32px 36px;
+}
+
+.icons-section h2 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.icons-section__grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-item i {
+  font-size: 1.7rem;
+  color: var(--color-blanco);
+  margin-bottom: 12px;
+}
+
+.icon-item p {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================
+   GALERÍA
+   ============================================ */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  background-color: var(--color-negro);
+  padding: 4px 0;
+}
+
+.galeria figure {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+  transform: scale(1.06);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background-color: var(--color-footer);
+  text-align: center;
+  padding: 20px 24px;
+}
+
+.footer p {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  color: var(--color-blanco);
+}
+
+.footer a {
+  color: var(--color-blanco);
+  text-decoration: underline;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 640px) {
+  .top-bar h1 {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+  }
+
+  .hero__img {
+    height: 260px;
+  }
+
+  .desc-section {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .desc-section__img {
+    width: 100%;
+  }
+
+  .desc-section__img img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .icons-section__grid {
+    gap: 36px;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>probando jquery</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Smooth Scroll</h1>
+<div class="main" id="section1">
+ <h2>Section 1</h2>
+ <p>Click on the link to see the "smooth" scrolling effect.</p>
+ <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+ <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+</div>
+<div class="main" id="section2">
+ <h2>Section 2</h2>
+ <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+</div>
+    <p>Si me clickeas dos veces, desapareceré.</p>
+    <p>¡Yo también!</p>
+    <p>¡Yo también!</p>
+    <div>Hola yo tambien</div>
+    <div id="imagen" class="centrado">
+    </div>
+
+    <li class="vacaciones">
+        <h2>La Serena, Chile</h2>
+        <span class="valor">$120.000</span>
+    </li>
+
+    <script>
+        $(document).ready(function () {
+            $("p, div").dblclick(function () {
+                $(this).hide("slow")
+            });
+            $("p").click(function () {
+                $(this).css({
+                    "color": "red",
+                    "font-size": "2em"
+                });
+            });
+            $("p").hover(function () {
+                $(this).html("<a href='#'>Me convertí</a>");
+            });
+            //$("img"). //Seleccionar las etiquetas "img".
+            //$("#imagen") //Seleccionar los elementos con id="imagen"
+            //$(".centrado") //Seleccionar los elementos con class="centrado"
+
+            $("p#click").click(function () {
+                console.log("click")
+            });
+            $(".valor").hover(function () {
+                $(this).text("$100.000")
+            });
+            $(".vacaciones").click(function () {
+                $(this).css({ "background-color": "yellow" })
+            });
+        });
+    </script>
+    <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/j
+query.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("a").on('click', function(event) {
+ if (this.hash !== "") {
+ event.preventDefault();
+ var hash = this.hash;
+ $('html, body').animate({
+ scrollTop: $(hash).offset().top
+ }, 800, function(){
+
+ window.location.hash = hash;
+ });
+ }
+ });
+});
+</script>
+</body>
+
+</html>
